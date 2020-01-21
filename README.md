@@ -17,10 +17,8 @@
  This is achieved by scanning for a value (a number) that when appended at the end of the data and hashed with SHA-256 gives the output with a certain number of zeroes at the beginning of the hash. So we have no option other than just "guessing and checking" the hash again and again after recursively changing the number and checking the hash untill we hit the target hash.
  
  This is known as Proof of Work. It proves that a node underwent a good amount of work and spent a considerable amount of time to find that number to achieve the target hash.
- ._
- ._
- ._
- 
+
+
  For a practical scenario - the length of the output hash of a SHA256 algorithm is 256 bits. The bitcoin protocol dictates that the hash for each block must begin with AT LEAST 30 zeroes. This means we have to check AT MOST 2^30 possible outcomes and an AVERAGE of 2^29 outcomes to output the desired hash.
  This probability is close to 1 in a Billion and for an average computer, this would take approximately 15 minutes to compute and close to 10 minutes for an ASIC (Application Specific Integrated Circuits) device; a device specially designed to compute hashes and nothing else.
  If the average time of adding a new block gets lesser and lesser, the difficulty is increased by the bitcoin protocol itself.
