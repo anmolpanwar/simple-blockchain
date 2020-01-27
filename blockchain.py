@@ -61,8 +61,8 @@ class Blockchain:
     def genesis(self):
         return Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'data in genesis')
 
-    def addGenesis(self): #addBlock vale method me if length of chain is 0 --> add genesis block se ho sakta tha but...
-        self.chain.append(self.genesis()) #baar baar block add karne pe ek if condition bar bar execute hoti faltu me
+    def addGenesis(self): 
+        self.chain.append(self.genesis())
 
     def load_trans_in_block(self,index):
         pass
