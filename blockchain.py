@@ -21,6 +21,8 @@ for i in range(t):
         break
 
     print (int(math.pow(2,int(math.log(num,2)))-1))
+    
+    
 class Block:
     blockindex = 1
     def __init__(self,ts,data,prevhash='0'):
