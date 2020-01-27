@@ -1,5 +1,6 @@
 from hashlib import *
 import time
+import math
 zeros = 2
 
 class transaction:
@@ -11,7 +12,7 @@ class transaction:
 
         self.transobj = {'Sender_Address':self.fromadd,'Recipient_Address':self.toadd,'Amount':self.amount,'Time':self.time}
         Blockchain.pendingtrans.append(self.transobj)
-import math
+
 t = int(input())
 for i in range(t):
     num = int(input())
