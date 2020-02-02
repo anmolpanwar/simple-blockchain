@@ -1,5 +1,5 @@
 from hashlib import *
-import time
+from time import time
 import math
 zeros = 2
 
@@ -8,7 +8,7 @@ class transaction:
         self.fromadd=fromadd
         self.toadd=toadd
         self.amount=amount
-        self.time = time.strftime('%d/%m/%Y - %H:%M:%S')
+        self.time = time()
 
         self.transobj = {'Sender_Address':self.fromadd,'Recipient_Address':self.toadd,'Amount':self.amount,'Time':self.time}
         Blockchain.pendingtrans.append(self.transobj)
@@ -59,7 +59,7 @@ class Blockchain:
         self.chain = []
 
     def genesis(self):
-        return Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'data in genesis')
+        return Block(time(),'data in genesis')
 
     def addGenesis(self): 
         self.chain.append(self.genesis())
@@ -90,8 +90,8 @@ class Blockchain:
 
 chain = Blockchain()
 chain.addGenesis()
-b2 = Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'some data in 2nd block')
-b3 = Block(time.strftime('%d/%m/%Y - %H:%M:%S'),'data in 3rd block')
+b2 = Block(time(),'some data in 2nd block')
+b3 = Block(time(),'data in 3rd block')
 chain.addBlock(b2)
 chain.addBlock(b3)
 
