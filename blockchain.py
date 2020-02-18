@@ -1,7 +1,7 @@
 from hashlib import *
 from time import time
 import math
-zeros = 4
+zeros = 5
 
 class transaction:
     def __init__(self,fromadd,toadd,amount):
